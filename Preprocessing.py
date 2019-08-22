@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[34]:
-
-
 import pandas as pd
 import numpy as np
 #import matplotlib
@@ -77,74 +73,6 @@ in_data = np.transpose(s_d_0)
 new_data = in_data.reshape(1,3000)
 print(new_data, np.shape(new_data))
 # print(new_data)
-
-
-# In[25]:
-
-
 np.savetxt("test.csv", new_data, delimiter=",")
-
-
-# In[3]:
-
-
-import numpy as np
-from numpy import loadtxt
-from keras.models import load_model
-from numpy import zeros, newaxis
-from keras.utils import np_utils
-# load model
-model = load_model('model.h5')
-# summarize model.
-model.summary()
-
-
-# In[33]:
-
-
-test_sample = (new_data+1.983725091504531e-06)/ 0.002995897201083166
-preds = model.predict(test_sample.reshape(1,3000,1))
-print(preds)
-
-
-# In[21]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[64]:
-
-
-test_sample
-
-
-# In[48]:
-
-
-new_data
-
-
-# In[ ]:
-
-
-np.transpose(x)
-
-
-# In[ ]:
-
-
 
 
